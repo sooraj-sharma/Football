@@ -1,0 +1,33 @@
+<% # Form Partial that will be reused across the different views and rendering process where forms are used %>
+
+<%= form_with(model: match) do |form| %>
+  <% if match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+        <% match.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mb-3">
+    <%= form.text_field :home_team, class:"form-control", placeholder:"Home Team" %>
+  </div>
+
+  <div class="field mb-3" >
+    <%= form.text_field :away_team, class:"form-control", placeholder:"Away Team" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :match_date %>
+    <%= form.datetime_select :match_date, class:"form-control" %>
+  </div>
+
+  <br/>
+  <div class="actions">
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+<% end %>

@@ -1,0 +1,53 @@
+<%= form_with(model: team) do |form| %>
+  <% if team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+        <% team.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mb-3">
+    <%= form.text_field :name, class:"form-control", placeholder:"Name" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :mp, class:"form-control", placeholder:"Matches Played" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :won, class:"form-control", placeholder:"Won" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :draw, class:"form-control", placeholder:"Draw" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :lose, class:"form-control", placeholder:"Lose" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :gf, class:"form-control", placeholder:"Goals For" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :ga, class:"form-control", placeholder:"Goals Against" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :gd, class:"form-control", placeholder:"Goal Difference" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :points, class:"form-control", placeholder:"Points" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @player.name %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @player.team %>
+</p>
+
+<p>
+  <strong>Postion:</strong>
+  <%= @player.postion %>
+</p>
+
+<p>
+  <strong>Matches:</strong>
+  <%= @player.matches %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @player.goals %>
+</p>
+
+<%= link_to 'Edit', edit_player_path(@player), class:"btn btn-secondary" %> |
+<%= link_to 'Back', players_path, class:"btn btn-dark" %>
+
+

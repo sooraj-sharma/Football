@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mp: 1
+  won: 1
+  draw: 1
+  lose: 1
+  gf: 1
+  ga: 1
+  gd: 1
+  points: 1
+
+two:
+  name: MyString
+  mp: 1
+  won: 1
+  draw: 1
+  lose: 1
+  gf: 1
+  ga: 1
+  gd: 1
+  points: 1

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Teams</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mp</th>
+      <th>Won</th>
+      <th>Draw</th>
+      <th>Lose</th>
+      <th>Gf</th>
+      <th>Ga</th>
+      <th>Gd</th>
+      <th>Points</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.name %></td>
+        <td><%= team.mp %></td>
+        <td><%= team.won %></td>
+        <td><%= team.draw %></td>
+        <td><%= team.lose %></td>
+        <td><%= team.gf %></td>
+        <td><%= team.ga %></td>
+        <td><%= team.gd %></td>
+        <td><%= team.points %></td>
+        <td><%= link_to 'Show', team %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Team', new_team_path %>
